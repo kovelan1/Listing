@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import ImgMediaCard from './ImgMediaCard';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 
@@ -27,16 +25,6 @@ function searchingFor(term,catgry){
     }
 }
 
-const useStyles = makeStyles(theme => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    },
-  }));
 
 export class Search extends Component {
 
@@ -107,7 +95,7 @@ export class Search extends Component {
                 <Grid container spacing={2}>
                     
                     {
-                        properties.filter(searchingFor(term,catgry)).map((data,index) =>{
+                        properties.filter(searchingFor(term,catgry)).map((data,index) => {
                            
                             if(((index+1)%3)===2){
                                 return(
@@ -131,6 +119,7 @@ export class Search extends Component {
                                      </Grid>
                                      
                                 );
+                                
                             }
                             
                         }

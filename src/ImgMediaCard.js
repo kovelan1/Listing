@@ -7,10 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { FaBed ,FaBath,FaParking} from "react-icons/fa";
+import { FaBed ,FaBath} from "react-icons/fa";
 import home1 from "./home1.jpg";
-import home2 from "./home2.jpg";
-import home3 from "./home3.jpg";
+
 
 const useStyles = makeStyles({
   root: {

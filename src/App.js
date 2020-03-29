@@ -1,26 +1,15 @@
-import React, {useState,Suspense}from "react";
+import React from "react";
 import "./App.css";
 import Map from './Map.js';
 import useSwr from "swr";
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Search from "./Search";
-import ImgMediaCard from './ImgMediaCard';
 import Container from '@material-ui/core/Container';
 
 const fetcher = (...args) => fetch(...args).then(response => response.json());
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
+
 
 // filter functuon//
 
@@ -28,7 +17,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function App() {
   const somedata=[];
-  const classes = useStyles();
   const url =
   "http://propertyservice.ap-southeast-1.elasticbeanstalk.com/api/property";
   const { data, error } = useSwr(url, { fetcher });
@@ -54,7 +42,7 @@ export default function App() {
     <div className="App">
     <Grid container spacing={2}>
       <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
+          <Paper >xs=12</Paper>
         </Grid>
     </Grid>
 <Container maxWidth="lg">
