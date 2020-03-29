@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Map from './Map.js';
 import useSwr from "swr";
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Search from "./Search";
 import Container from '@material-ui/core/Container';
@@ -40,9 +39,11 @@ export default function App() {
   return (
 
     <div className="App">
-    <Grid container spacing={2}>
+    <Grid container spacing={1}>
       <Grid item xs={12}>
-          <Paper >xs=12</Paper>
+          <div style={{height:40, backgroundColor:'gray'}}>
+
+          </div>
         </Grid>
     </Grid>
 <Container maxWidth="lg">
